@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-principal-claro: #ffd43b;
+  --cor-principal-claro-hover: #fab005;
+  --cor-principal-texto-claro: #202020;
+}
+
+body {
+  height: 100vh;
+
+  padding: 2.5rem;
+
+  background-color: var(--cor-principal-claro);
+  color: var(--cor-principal-texto-claro);
+  font-family: 'Nunito', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.profile img {
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--cor-principal-texto-claro);
+
+}
+
+.profile h1 {
+  font-size: 1.75rem;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+
+}
+
+.socials .social-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  height: inherit;
+
+}
+
+.socials .social-container a {
+  border: 4px solid var(--cor-principal-texto-claro);
+  border-radius: 8px;
+
+  width: 100%;
+  height: 64px;
+  padding: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--cor-principal-claro);
+
+  text-decoration: none;
+  color: var(--cor-principal-texto-claro);
+  font-size: 1.5rem;
+}
+
+.socials .social-container:first-child a {
+  animation: bounce .4s ease-in-out alternate infinite;
+}
+
+.socials .social-container a span {
+  animation: tilt .4s ease-in-out alternate infinite;
+
+  margin-left: 1rem;
+}
+
+.socials .social-container a:hover {
+  transform: translateY(-4px) translateX(4px);
+  background-color: var(--cor-principal-claro-hover);
+
+  transition: all 0.2s ease-in-out;
+}
+
+.socials .social-container a i {
+  margin-right: .5rem;
+  color: var(--cor-principal-texto-claro);
+  font-size: 1.5rem;
+}
+
+.socials .social-container .shadow {
+  height: 64px;
+  width: 100%;
+  background-color: var(--cor-principal-texto-claro);
+  border: 4px solid var(--cor-principal-texto-claro);
+  border-radius: 8px;
+  position: absolute;
+  z-index: -1;
+}
+
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+
+footer p span {
+  animation: pump 1s ease-in-out alternate infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+
+  to {
+    transform: translateY(-4px) translateX(4px);
+  }
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(-12.5deg) scale(1)
+  }
+  25% {
+    transform: rotate(12.5deg) scale(1.125);
+  }
+  50% {
+    transform: rotate(25deg) scale(1.25);
+  }
+  75% {
+    transform: rotate(12.5deg) scale(1.125);
+  }
+  100% {
+    transform: rotate(-12.5deg) scale(1.125);
+  }
+  
+}
+
+@keyframes pump {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.5);
+  }
+  30% {
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    max-width: 700px;
+    margin: auto;
+
+    padding: 4rem;
+  }
+}
+
+
+
