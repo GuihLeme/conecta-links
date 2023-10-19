@@ -17,8 +17,7 @@
 
 body {
   height: 100vh;
-
-  padding: 2.5rem;
+  padding: 1.5rem 2.5rem;
 
   background-color: var(--cor-principal-claro);
   color: var(--cor-principal-texto-claro);
@@ -76,7 +75,9 @@ main {
   justify-content: center;
   position: relative;
   width: 64px;
-  margin: auto;
+  margin: 1.5rem auto;
+
+  cursor: pointer;
 }
 
 #switch button:hover {
@@ -289,7 +290,7 @@ footer p span {
 
 @media (min-width: 768px) {
   body {
-    max-width: 700px;
+    max-width: 640px;
     margin: auto;
 
     padding: 4rem;
